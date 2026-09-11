@@ -26,14 +26,14 @@ npm run preview
 
 ## 部署到 Vercel
 
-在 Vercel 中导入此仓库，然后设置：
+在 Vercel 中导入此仓库即可。推荐保持仓库根目录为项目根目录：
 
-- Root Directory：`src`
-- Framework Preset：`Vite`
-- Build Command：`npm run build`
-- Output Directory：`dist`
+- Root Directory：`.`（留空即可）
+- Install Command：由根目录 `vercel.json` 配置
+- Build Command：由根目录 `vercel.json` 配置
+- Output Directory：由根目录 `vercel.json` 配置
 
-项目已经包含 `vercel.json`，可以支持 React Router 的单页应用路由。
+根目录配置会进入 `src` 安装依赖和构建，并支持 React Router 的单页应用路由。如果 Vercel 项目已经将 Root Directory 设置为 `src`，`src/vercel.json` 也提供了相同配置。
 
 也可以通过命令行部署：
 
